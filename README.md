@@ -1,7 +1,7 @@
 ## Where do I find what?
-server: the Server
-controller-app: The app which controlls the Parrot Jumping Race and takes the pictures
-Drohnenhandy: The simulated display of the drone
+- server: the Server
+- controller-app: The app which controlls the Parrot Jumping Race and takes the pictures
+- Drohnenhandy: The simulated display of the drone
 
 ## Inspiration
 HackaTUM Project: Motivate people to visit tech stores using gear
