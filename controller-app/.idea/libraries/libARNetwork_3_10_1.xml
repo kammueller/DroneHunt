@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="libARNetwork-3.10.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.parrot/libARNetwork/3.10.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.parrot/libARNetwork/3.10.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parrot/libARNetwork/3.10.1/c674390694cfa17afd4334aa6c03f965db411ad3/libARNetwork-3.10.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

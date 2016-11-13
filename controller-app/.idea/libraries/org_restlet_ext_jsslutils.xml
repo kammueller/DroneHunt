@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.restlet.ext.jsslutils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/org.restlet.ext.jsslutils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

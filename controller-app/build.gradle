@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.2'
+
+    defaultConfig {
+        applicationId "com.parrot.sdksample"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'commons-net:commons-net:3.5'
+    if (rootProject.hasProperty('buildWithLocalSDK')) {
+        compile project(':arsdk')
+    } else {
+        compile 'com.parrot:arsdk:3.10.1'
+    }
+    compile files('libs/org.restlet.jar')
+    compile files('libs/org.restlet.ext.xml.jar')
+    compile files('libs/org.restlet.ext.thymeleaf.jar')
+    compile files('libs/org.restlet.ext.sip.jar')
+    compile files('libs/org.restlet.ext.rdf.jar')
+    compile files('libs/org.restlet.ext.odata.jar')
+    compile files('libs/org.restlet.ext.nio.jar')
+    compile files('libs/org.restlet.ext.jsslutils.jar')
+    compile files('libs/org.restlet.ext.json.jar')
+    compile files('libs/org.restlet.ext.jaxrs.jar')
+    compile files('libs/org.restlet.ext.jackson.jar')
+    compile files('libs/org.restlet.ext.jaas.jar')
+    compile files('libs/org.restlet.ext.httpclient.jar')
+    compile files('libs/org.restlet.ext.html.jar')
+    compile files('libs/org.restlet.ext.gson.jar')
+    compile files('libs/org.restlet.ext.crypto.jar')
+    compile files('libs/org.restlet.ext.atom.jar')
+}
