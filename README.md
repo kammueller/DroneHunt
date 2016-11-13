@@ -2,6 +2,7 @@
 - server: the Server
 - controller-app: The app which controlls the Parrot Jumping Race and takes the pictures
 - Drohnenhandy: The simulated display of the drone
+- UserApplication: The User app
 
 ## Inspiration
 HackaTUM Project: Motivate people to visit tech stores using gear
