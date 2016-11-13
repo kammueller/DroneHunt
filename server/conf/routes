@@ -1,0 +1,47 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+# An example controller showing a sample home page
+#GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+#GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+#GET     /message                    controllers.AsyncController.message
+
+
+# REST-SERVICES
+
+# insert user into db {name: 'foo'} -> 200, {token: '...'} || 403
+POST	/register					controllers.UserController.register
+
+GET		/getToken/:username			controllers.UserController.getToken(username:String)
+
+# 200 || 403
+POST	/activate				controllers.UserController.activateUser
+
+POST	/resolveToken			controllers.UserController.resolveToken
+
+# 200 { secondsValid: 1231232 } [wie viele sekunden ist account noch aktiv]
+POST	/isActive				controllers.UserController.getRemainingActivationSeconds
+
+# 200 { hintAvailable: true|false } currentHint = (File.getName())
+GET		/newHintAvailable/:currentHint	controllers.UserController.isNewHintAvailable(currentHint:String)
+
+# 200 Returns image/jpeg or whatever
+GET		/currentHint				controllers.UserController.getCurrentHint
+
+POST	/check						controllers.UserController.checkGoalSecret
+
+# 200 { inGoalRange: true | false } (
+#GET		/inGoalRange/:longitude/:latitude
+
+POST	/uploadNewHint				controllers.UserController.uploadNewHint
+#POST 	/updateGPS {longitude: ..., latitude: ...}
+
+POST	/createChallenge			controllers.UserController.createChallenge
+POST	/destroyChallenge			controllers.UserController.destroyChallenge
+
+GET		/winnerExists				controllers.UserController.winnerExists
+
+# STATIC FILES
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
