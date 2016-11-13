@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">User App</string>
+    <string name="register">Here you can sign up for the amazing hunt</string>
+    <string name="name">Please enter an username</string>
+    <string name="error">Error</string>
+    <string name="welcome">Welcome to the Package Deliverer Race</string>
+    <string name="implementedBy">Implemented by Neubig, Kammüller, Kassahun, Buske, Lannes @ hackaTUM 2016</string>
+    <string name="assistance">With the friendly assistance of Media-Saturn Holding</string>
+    <string name="submitButton">Submit</string>
+    <string name="start">Starting...</string>
+    <string name="spaß">Hauptsache Ihr habt Spaß!"</string>
+    <string name="notActivated">Please scan your QR code</string>
+    <string name="hint">Current Hint</string>
+    <string name="refresh">Refresh Hint</string>
+    <string name="scanCode">Scan QR code</string>
+</resources>

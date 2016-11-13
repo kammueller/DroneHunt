@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.hackatum.mediasaturn.userapp" >
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+    android:allowBackup="true"
+    android:icon="@drawable/logo_1"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme" >
+        <activity android:name=".activities.MainActivity" >
+
+        </activity>
+        <activity android:name=".activities.RegisterActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ActivateActivity" >
+
+        </activity>
+        <activity android:name=".activities.HintActivity" >
+
+        </activity>
+        <activity android:name=".activities.ScanActivity" >
+
+        </activity>
+        <activity android:name=".activities.IntroActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
